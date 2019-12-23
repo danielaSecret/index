@@ -1,3 +1,7 @@
+html{
+    height: 100vh;
+}
+
 div h1 {
     background-color: red;
     width: 50%;
@@ -11,12 +15,13 @@ div h1 {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    height: 50px;
+    height: 10vh;
 }
 
 #botones button{
 
     width: 40%;
+    
 }
 
 
