@@ -1,4 +1,4 @@
-html{
+html {
     height: 100vh;
 }
 
@@ -9,7 +9,7 @@ div h1 {
     margin: 0 auto;
 }
 
-#botones{
+#botones {
     background-color: blue;
     width: 50%;
     display: flex;
@@ -18,12 +18,7 @@ div h1 {
     height: 10vh;
 }
 
-#botones button{
-
+#botones button {
     width: 40%;
-    height: 10vh;
-
-    
+    height: 200px;
 }
-
-
