@@ -10,5 +10,13 @@ div h1 {
     width: 50%;
     display: flex;
     justify-content: space-between;
-
+    margin: 0 auto;
+    height: 50px;
 }
+
+#botones button{
+
+    width: 40%;
+}
+
+
