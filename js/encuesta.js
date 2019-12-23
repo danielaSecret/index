@@ -118,7 +118,7 @@ const Encuesta = (function () {
             button_siguiente.innerHTML = 'siguiente'
             button_atras.innerHTML = 'atras'
 
-            button_siguiente.addEventListener('click', () => {
+            button_siguiente.addEventListener('ontouchend', () => {
                 console.log(body.children[0].firstChild)
                 body.removeChild(body.children[0])
                 changeQuestion()
@@ -128,7 +128,7 @@ const Encuesta = (function () {
 
             })
 
-            button_atras.addEventListener('click', () => {
+            button_atras.addEventListener('ontouchend', () => {
                 body.removeChild(body.children[0])
 
                 changeQuestionMoin()
