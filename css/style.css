@@ -16,8 +16,7 @@ div h1 {
     margin: 0 auto;
 }
 
-p{
-
+p {
     font-size: 1.5rem;
     text-align: center;
 }
@@ -25,6 +24,10 @@ p{
 #botones button {
     width: 40%;
     height: 150px;
+    font-size: 1.4rem;
+    -webkit-box-shadow: 13px 13px 17px 3px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: 13px 13px 17px 3px rgba(0, 0, 0, 0.58);
+    box-shadow: 13px 13px 17px 3px rgba(0, 0, 0, 0.58);
 }
 
 li {
@@ -34,4 +37,3 @@ li {
     font-size: 1.4rem;
     justify-content: center;
 }
-
