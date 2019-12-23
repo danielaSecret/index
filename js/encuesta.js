@@ -4,10 +4,16 @@ const LISTA_PREGUNTAS = [
         pregunta: 'algo que todos amen pero que cesar no tanto?', opciones: ['perros', 'comer', 'musica', 'helado'], respuesta: 'musica'
     },
     {
-        pregunta: 'genero favorito de daniela', opciones: ['anime', 'terror', 'muerte', 'misterio'], respuesta: 'terror'
+        pregunta: 'dia de niversario entre cesar y daniela?', opciones: ['cada 7', 'cada 10', 'cada primero', 'cada 20'], respuesta: 'cada 20'
     },
     {
-        pregunta: 'como le dicen a daniela', opciones: ['mamiela', 'dani', 'cesar', 'pepe'], respuesta: 'mamiela'
+        pregunta: 'como le dice cesar a daniela la mayoria de veces?', opciones: ['mamiela', 'daniela', 'jessica', 'amor'], respuesta: 'mamiela'
+    },
+    {
+        pregunta: 'como se llama el cactus de daniela?', opciones: ['manuel', 'mordelon', 'puntas', 'verde'], respuesta: 'mordelon'
+    },
+    {
+        pregunta: 'algo que solo daniela hace cuando se ducha?', opciones: ['se pone champoo', 'se pone jabon', 'toma una cerveza', 'nada'], respuesta: 'toma una cerveza'
     }
 ]
 
@@ -46,9 +52,9 @@ const Encuesta = (function () {
             let opciones_ul = this.createElement('ul', [{ name: 'id', value: 'lista' }])
 
             for (let i = 0; i < this.opciones.length; i++) {
-                let li = this.createElement('li',[])
-                let label = this.createElement('label',[])
-                let opciones_li = this.createElement('input', [{ name: 'type', value: 'radio' },{ name: 'value', value: this.opciones[i] }, { name: 'name', value: LISTA_PREGUNTAS[num_pregunta].pregunta }])
+                let li = this.createElement('li', [])
+                let label = this.createElement('label', [])
+                let opciones_li = this.createElement('input', [{ name: 'type', value: 'radio' }, { name: 'value', value: this.opciones[i] }, { name: 'name', value: LISTA_PREGUNTAS[num_pregunta].pregunta }])
                 console.log(li)
                 label.innerHTML = this.opciones[i]
                 li.appendChild(label)
