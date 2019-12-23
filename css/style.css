@@ -26,3 +26,12 @@ p{
     width: 40%;
     height: 150px;
 }
+
+li {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    font-size: 1.4rem;
+    justify-content: center;
+}
+

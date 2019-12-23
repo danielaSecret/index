@@ -43,12 +43,17 @@ const Encuesta = (function () {
             const div_opciones = this.createElement('div', [])
 
             let pregunta_p = this.createElement('p', [])
-            let opciones_ul = this.createElement('ul', [])
+            let opciones_ul = this.createElement('ul', [{ name: 'id', value: 'lista' }])
 
             for (let i = 0; i < this.opciones.length; i++) {
-                let opciones_li = this.createElement('li', [])
-                opciones_li.innerHTML = this.opciones[i]
-                opciones_ul.appendChild(opciones_li)
+                let li = this.createElement('li',[])
+                let label = this.createElement('label',[])
+                let opciones_li = this.createElement('input', [{ name: 'type', value: 'radio' },{ name: 'value', value: this.opciones[i] }, { name: 'name', value: LISTA_PREGUNTAS[num_pregunta].pregunta }])
+                console.log(li)
+                label.innerHTML = this.opciones[i]
+                li.appendChild(label)
+                li.appendChild(opciones_li)
+                opciones_ul.appendChild(li)
 
             }
 
