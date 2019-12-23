@@ -34,12 +34,12 @@ li {
     display: flex;
     height: 60px;
     align-items: center;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     justify-content: center;
 }
  
 input{
 
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }
