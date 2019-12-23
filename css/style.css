@@ -10,15 +10,13 @@ div h1 {
 }
 
 #botones {
-    background-color: blue;
-    width: 50%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    height: 10vh;
 }
 
 #botones button {
     width: 40%;
-    height: 200px;
+    height: 150px;
 }
