@@ -5,3 +5,10 @@ div h1 {
     margin: 0 auto;
 }
 
+#botones{
+    background-color: blue;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+}

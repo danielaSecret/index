@@ -112,7 +112,7 @@ const Encuesta = (function () {
             let x = new Pregunta(LISTA_PREGUNTAS[current].pregunta, LISTA_PREGUNTAS[current].opciones)
 
             const body = document.body.children[2]
-            const div_next = createElement('div', [])
+            const div_next = createElement('div', [{ name: 'id', value: 'botones' }])
             const button_siguiente = createElement('button', [])
             const button_atras = createElement('button', [])
             button_siguiente.innerHTML = 'siguiente'
