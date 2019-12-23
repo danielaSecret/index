@@ -71,7 +71,7 @@ const Encuesta = (function () {
         if (num_pregunta === (LISTA_PREGUNTAS.length - 1)) {
 
             num_pregunta = (LISTA_PREGUNTAS.length - 1)
-        }else{
+        } else {
 
             num_pregunta++
 
@@ -86,7 +86,7 @@ const Encuesta = (function () {
         if (num_pregunta === 0) {
 
             num_pregunta = 0
-        }else{
+        } else {
 
             num_pregunta--
 
