@@ -31,12 +31,20 @@ p {
     box-shadow: 13px 13px 17px 3px rgba(0, 0, 0, 0.58);
 }
 
+ul{
+
+    width: 80%;
+    background-color: pink;
+    margin: 0 auto;
+}
+
 li {
     display: flex;
     height: 60px;
     align-items: center;
-    font-size: 1.8rem;
-    justify-content: center;
+    font-size: 1.4rem;
+    justify-content: space-between;
+    width: 80%;
 }
 
 input {

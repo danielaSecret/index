@@ -17,11 +17,13 @@ const LISTA_PREGUNTAS = [
     }
 ]
 
-
+let RESPUESTAS = []
+let num_pregunta = 0
 
 const Encuesta = (function () {
 
-    let num_pregunta = 0
+
+    let preguntasFormato = []
 
     class Pregunta {
         constructor(pregunta, opciones) {
@@ -55,7 +57,6 @@ const Encuesta = (function () {
                 let li = this.createElement('li', [])
                 let label = this.createElement('label', [])
                 let opciones_li = this.createElement('input', [{ name: 'type', value: 'radio' }, { name: 'value', value: this.opciones[i] }, { name: 'name', value: LISTA_PREGUNTAS[num_pregunta].pregunta }])
-                console.log(li)
                 label.innerHTML = this.opciones[i]
                 li.appendChild(label)
                 li.appendChild(opciones_li)
@@ -88,7 +89,8 @@ const Encuesta = (function () {
 
         }
 
-
+        console.log(num_pregunta)
+        return num_pregunta
     }
 
     function changeQuestionMoin() {
@@ -116,11 +118,65 @@ const Encuesta = (function () {
         return element
     }
 
+    function buttons() {
+        const div_next = createElement('div', [{ name: 'id', value: 'botones' }])
+        const button_siguiente = createElement('button', [])
+        const button_atras = createElement('button', [])
+        button_siguiente.innerHTML = 'siguiente'
+        button_atras.innerHTML = 'atras'
+
+        div_next.appendChild(button_atras)
+        div_next.appendChild(button_siguiente)
+
+        button_siguiente.addEventListener('click', () => {
+            console.log('hola')
+            changeQuestion()
+
+        })
+
+        return div_next
+    }
+
+    function plusResponses() {
+
+        
+
+    }
+
     return {
         init: function () {
 
+            /*
+                        for (let i = 0; i < LISTA_PREGUNTAS.length; i++) {
+                            let x = new Pregunta(LISTA_PREGUNTAS[i].pregunta, LISTA_PREGUNTAS[i].opciones)
+                            preguntasFormato.push(x.build())
+            
+                        }
+                        const body = document.body.children[2]
+                        
+                        const div_next = createElement('div', [{ name: 'id', value: 'botones' }])
+                        const button_siguiente = createElement('button', [])
+                        const button_atras = createElement('button', [])
+                        button_siguiente.innerHTML = 'siguiente'
+                        button_atras.innerHTML = 'atras'
+                
+                        div_next.appendChild(button_atras)
+                        div_next.appendChild(button_siguiente)
+                
+                        button_siguiente.addEventListener('click', () => {
+                            console.log('hola')
+                            changeQuestion()
+                
+                        })
+                        body.appendChild(preguntasFormato[0])
+                        body.appendChild(buttons())
+            
+            
+            */
+
             let current = num_pregunta
             let x = new Pregunta(LISTA_PREGUNTAS[current].pregunta, LISTA_PREGUNTAS[current].opciones)
+
 
             const body = document.body.children[2]
             const div_next = createElement('div', [{ name: 'id', value: 'botones' }])
@@ -129,6 +185,7 @@ const Encuesta = (function () {
             button_siguiente.innerHTML = 'siguiente'
             button_atras.innerHTML = 'atras'
 
+
             button_siguiente.addEventListener('click', () => {
                 console.log(body.children[0].firstChild)
                 body.removeChild(body.children[0])
@@ -136,6 +193,15 @@ const Encuesta = (function () {
                 x = new Pregunta(LISTA_PREGUNTAS[num_pregunta].pregunta, LISTA_PREGUNTAS[num_pregunta].opciones)
                 body.appendChild(x.build())
                 body.appendChild(div_next)
+
+                let lista = document.getElementById("lista")
+                console.log('chiste', lista)
+
+                lista.addEventListener('click', function (event) {
+
+                    console.log(event.target.value)
+
+                })
 
             })
 
@@ -156,6 +222,15 @@ const Encuesta = (function () {
 
             body.appendChild(x.build())
             body.appendChild(div_next)
+
+            let lista = document.getElementById("lista")
+            console.log('chiste', lista)
+
+            lista.addEventListener('click', function (event) {
+
+                console.log(event.target.value)
+
+            })
 
         }
 
